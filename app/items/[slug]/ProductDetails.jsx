@@ -272,17 +272,7 @@ export default function ProductDetails({
                             Model : {product.model}
                         </p>
 
-                        <div className="description-box">
 
-                            <h3>
-                                Description
-                            </h3>
-
-                            <p>
-                                {product.desc}
-                            </p>
-
-                        </div>
 
                         <div className="specs">
 
@@ -329,7 +319,17 @@ export default function ProductDetails({
                             </div>
 
                         </div>
+                        <div className="description-box">
 
+                            <h3>
+                                Description
+                            </h3>
+
+                            <p>
+                                {product.desc}
+                            </p>
+
+                        </div>
                     </div>
 
                 </div>
