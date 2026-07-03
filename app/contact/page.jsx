@@ -34,6 +34,11 @@ export default function Contact() {
                 .includes(pathParts[0])
             ? pathParts[0]
             : null;
+    const city = districtSlug
+        ? districtSlug
+            .replace(/-/g, " ")
+            .replace(/\b\w/g, (c) => c.toUpperCase())
+        : "India";
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
     useEffect(() => {
@@ -318,7 +323,7 @@ export default function Contact() {
                 <div className="container">
 
                     <div className="hero-badge">
-                        BIOMEDICAL EQUIPMENT CONSULTATION in india
+                        BIOMEDICAL EQUIPMENT CONSULTATION in {city}
                     </div>
 
                     <h1>

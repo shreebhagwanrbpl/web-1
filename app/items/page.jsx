@@ -184,13 +184,17 @@ export default function Products() {
                                     className="product-card"
                                 >
                                     <div className="product-image">
-
-                                        <img
-                                            src={product.image}
-                                            alt={product.title}
-                                            loading="lazy"
-                                        />
-
+                                        {product.image ? (
+                                            <img
+                                                src={product.image}
+                                                alt={product.title}
+                                                loading="lazy"
+                                            />
+                                        ) : (
+                                            <div className="no-image">
+                                                No Image
+                                            </div>
+                                        )}
                                     </div>
 
                                     <div className="product-content">

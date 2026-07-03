@@ -36,7 +36,9 @@ export default function Navbar() {
             )
             ? pathParts[0]
             : "";
-
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
     const makeLink = (
         path = ""
     ) => {
@@ -59,6 +61,7 @@ export default function Navbar() {
 
                 <Link
                     href={makeLink("")}
+                    onClick={closeMenu}
                     className="logo"
                 >
                     Humanbio
@@ -73,6 +76,7 @@ export default function Navbar() {
                     <li>
                         <Link
                             href={makeLink("")}
+                            onClick={closeMenu}
                         >
                             Home
                         </Link>
@@ -83,6 +87,7 @@ export default function Navbar() {
                             href={makeLink(
                                 "/about"
                             )}
+                            onClick={closeMenu}
                         >
                             About
                         </Link>
@@ -93,6 +98,7 @@ export default function Navbar() {
                             href={makeLink(
                                 "/services"
                             )}
+                            onClick={closeMenu}
                         >
                             Services
                         </Link>
@@ -103,6 +109,7 @@ export default function Navbar() {
                             href={makeLink(
                                 "/items"
                             )}
+                            onClick={closeMenu}
                         >
                             Products
                         </Link>
@@ -113,6 +120,7 @@ export default function Navbar() {
                             href={makeLink(
                                 "/contact"
                             )}
+                            onClick={closeMenu}
                         >
                             Contact
                         </Link>
@@ -121,14 +129,11 @@ export default function Navbar() {
                 </ul>
 
                 <button
+
                     className="menu-btn"
-                    onClick={() =>
-                        setMenuOpen(
-                            !menuOpen
-                        )
-                    }
+                    onClick={() => setMenuOpen(!menuOpen)}
                 >
-                    ☰
+                    {menuOpen ? "✕" : "☰"}
                 </button>
 
             </div>
