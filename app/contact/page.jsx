@@ -18,8 +18,8 @@ export default function Contact() {
         pathname.split("/").filter(Boolean);
     const [contactInfo, setContactInfo] = useState([]);
     const [pageLoading, setPageLoading] = useState(true);
-    const [districtInfo, setDistrictInfo] =
-        useState(null);
+    const [districtInfo, setDistrictInfo] = useState(null);
+
     const [form, setForm] = useState({
         name: "",
         phone: "",
