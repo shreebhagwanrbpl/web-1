@@ -1,0 +1,1 @@
+# Full Biomedical Next.js Project\nStarter production structure.

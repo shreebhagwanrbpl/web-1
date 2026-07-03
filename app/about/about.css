@@ -1,0 +1,389 @@
+/* ===================================
+   ABOUT HERO
+=================================== */
+
+.about-hero {
+    padding: 140px 20px;
+    text-align: center;
+    background: linear-gradient(135deg,
+            #f8fbff 0%,
+            #eef6ff 50%,
+            #dbeafe 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(0, 102, 204, 0.08);
+    border-radius: 50%;
+    top: -250px;
+    right: -250px;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(56, 189, 248, 0.12);
+    border-radius: 50%;
+    bottom: -150px;
+    left: -150px;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #0066cc;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero h1 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+    margin: auto;
+
+    font-size: 5rem;
+    line-height: 1.05;
+    font-weight: 800;
+
+    color: #0f172a;
+}
+
+.about-hero p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 750px;
+    margin: 30px auto 0;
+
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ===================================
+   ACHIEVEMENTS
+=================================== */
+
+.about-achievements {
+    margin-top: 70px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(12px);
+
+    padding: 35px;
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, .06);
+
+    transition: .3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+}
+
+.achievement-card h2 {
+    color: #0066cc;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.achievement-card span {
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* ===================================
+   STORY
+=================================== */
+
+.story-section {
+    padding: 120px 20px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-content h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+.story-grid p {
+    color: #64748b;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.story-card {
+    background: linear-gradient(135deg,
+            #0066cc,
+            #3b82f6);
+
+    padding: 45px;
+    border-radius: 28px;
+
+    color: white;
+
+    box-shadow:
+        0 20px 40px rgba(0, 102, 204, .2);
+}
+
+.story-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.story-card p {
+    color: rgba(255, 255, 255, .9);
+}
+
+/* ===================================
+   TIMELINE
+=================================== */
+
+.timeline-section {
+    padding: 120px 20px;
+    background: #f8fafc;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.timeline-item {
+    background: white;
+
+    padding: 35px;
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .05);
+
+    transition: .3s;
+}
+
+.timeline-item:hover {
+    transform: translateY(-8px);
+}
+
+.timeline-item h3 {
+    font-size: 2rem;
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    color: #64748b;
+}
+
+/* ===================================
+   CTA
+=================================== */
+
+.about-cta {
+    padding: 140px 20px;
+    text-align: center;
+
+    background: linear-gradient(135deg,
+            #ffffff,
+            #f8fbff,
+            #eef6ff);
+}
+
+.about-cta h2 {
+    font-size: 3rem;
+    color: #0f172a;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-cta p {
+    color: #64748b;
+    margin: 25px auto;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+.about-cta a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 16px 35px;
+
+    background: #0066cc;
+    color: white;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.about-cta a:hover {
+    transform: translateY(-4px);
+    background: #0055aa;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 992px) {
+
+    .about-achievements,
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-achievements,
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero {
+        padding: 100px 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 2.4rem;
+        line-height: 1.15;
+    }
+
+    .story-grid h2,
+    .about-cta h2 {
+        font-size: 2rem;
+    }
+
+    .achievement-card h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* STORY CONTENT */
+
+.story-tag {
+    display: inline-block;
+    color: #0066cc;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.story-content h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+.story-content p {
+    color: #64748b;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* STORY POINTS */
+
+.story-points {
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.story-points div {
+    background: #f8fbff;
+    border: 1px solid rgba(0, 102, 204, .08);
+
+    padding: 15px 18px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* MISSION STATS */
+
+.mission-stats {
+    display: flex;
+    gap: 40px;
+
+    margin-top: 35px;
+}
+
+.mission-stats h4 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.mission-stats span {
+    color: rgba(255, 255, 255, .85);
+}
+
+@media (max-width:768px) {
+
+    .story-points {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-stats {
+        justify-content: space-between;
+    }
+
+    .story-content h2 {
+        font-size: 2.2rem;
+    }
+}
